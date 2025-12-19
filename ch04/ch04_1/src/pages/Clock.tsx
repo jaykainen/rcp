@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Div, Title, Subtitle } from "../components";
+import { Div, Title, Subtitle } from "./components";
 
 export type ClockProps = {
   today: Date;
