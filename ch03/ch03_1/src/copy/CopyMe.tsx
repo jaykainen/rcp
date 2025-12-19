@@ -1,3 +1,3 @@
 export default function CopyMe() {
-  return <div>CopyMe</div>
+  return <div>Me</div>
 }
