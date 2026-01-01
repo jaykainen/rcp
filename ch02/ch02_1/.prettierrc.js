@@ -5,5 +5,5 @@ module.exports = {
   trailingComma: 'none',
   arrowParens: 'avoid',
   semi: false,
-  printWidth: 90,
+  printWidth: 90
 }

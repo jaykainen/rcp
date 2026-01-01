@@ -1,8 +1,10 @@
 import ReactDOM from 'react-dom/client'
 import * as D from './data'
 
-const children = D.makeArray(10).map((notUsed, index) => (
+const children = D.makeArray(10).map((notUsed, index, value) => (
   <div key={index}>
+    <p>{index}</p>
+    {value[index]}
     <p>{D.randomId()}</p>
     <p>{D.randomName()}</p>
     <p>{D.randomJobtitle()}</p>
