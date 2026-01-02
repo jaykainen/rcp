@@ -7,10 +7,10 @@ export type IconProps = ReactSpanProps & {
 }
 
 //prettier-ignore
-export const Icon: FC<IconProps> = ({name, className: _className, ...propssss}) => {
+export const Icon: FC<IconProps> = ({name, className: _className, ...props}) => {
   const className = ['material-icons', _className].join(' ')
   return (
-    <span {...propssss} className={className}>
+    <span {...props} className={className}>
       {name}
     </span>
   )
