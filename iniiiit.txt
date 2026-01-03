@@ -11,4 +11,4 @@ cp -r ../ch03_3/src/* ./src
 cp -r ../ch03_3/*.js .
 rm src/pages/*
 
-ss
+cp copy/CopyMe.tsx pages/DirectionTest.tsx
