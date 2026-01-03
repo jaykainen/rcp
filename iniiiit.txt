@@ -10,3 +10,5 @@ npm i -D @tailwindcss/line-clamp daisyui
 cp -r ../ch03_3/src/* ./src
 cp -r ../ch03_3/*.js .
 rm src/pages/*
+
+ss
