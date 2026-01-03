@@ -1,0 +1,14 @@
+npx create-react-app ch03_4 --template typescript
+
+cd ch03_4
+
+npm i chance luxon @fontsource/material-icons
+npm i -D @types/chance @types/luxon
+npm i -D postcss autoprefixer tailwindcss@3
+npm i -D @tailwindcss/line-clamp daisyui
+
+cp -r ../ch03_3/src/* ./src
+cp -r ../ch03_3/*.js .
+rm src/pages/*
+
+ss
