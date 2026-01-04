@@ -11,4 +11,6 @@ cp -r ../ch03_3/src/* ./src
 cp -r ../ch03_3/*.js .
 rm src/pages/*
 
+//tailwind와 daisyui 버전 중요!!!
+
 cp copy/CopyMe.tsx pages/DirectionTest.tsx
