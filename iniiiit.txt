@@ -5,7 +5,7 @@ cd ch03_4
 npm i chance luxon @fontsource/material-icons
 npm i -D @types/chance @types/luxon
 npm i -D postcss autoprefixer tailwindcss@3
-npm i -D @tailwindcss/line-clamp daisyui
+npm i -D @tailwindcss/line-clamp daisyui@4
 
 cp -r ../ch03_3/src/* ./src
 cp -r ../ch03_3/*.js .
