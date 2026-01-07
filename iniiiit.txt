@@ -6,8 +6,8 @@ npm i chance luxon @fontsource/material-icons
 npm i -D @types/chance @types/luxon
 npm i -D postcss autoprefixer tailwindcss@3 @tailwindcss/line-clamp daisyui@4
 
-cp -r ../ch03_3/src/* ./src
-cp -r ../ch03_3/*.js .
+cp -r ../ch04_2/src/* ./src
+cp -r ../ch04_2/*.js .
 rm src/pages/*
 
 //tailwind와 daisyui 버전 중요!!!
