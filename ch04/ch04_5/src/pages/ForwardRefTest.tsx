@@ -1,8 +1,30 @@
-export default function CopyMe() {
+import {useRef, useCallback, useEffect} from 'react'
+import {Title} from '../components'
+import {Input, Button} from '../theme/daisyui'
+
+//책은 실행결과가 undefined(리액트 v19이전), 내 환경은 리액트 v19라서 forwardRef를 안써도 ref타입이 전달됨
+export default function ForwardRefTest() {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const getValue = useCallback(
+    () => alert(`input value : ${inputRef.current?.value}`),
+    []
+  )
+
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
+
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center">Copy Me</h2>
-      <div className="mt-4"></div>
+      <Title>ForwardRefTest</Title>
+      <div className="flex justify-center mt-4">
+        <div className="flex flex-col w-1/3 p-2">
+          <Input ref={inputRef} className="input-primary" />
+          <Button className="mt-4 btn-primary" onClick={getValue}>
+            Get Value
+          </Button>
+        </div>
+      </div>
     </section>
   )
 }
