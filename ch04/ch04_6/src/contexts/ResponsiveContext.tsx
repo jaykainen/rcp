@@ -1,3 +1,4 @@
+import type {FC, PropsWithChildren} from 'react'
 import {createContext} from 'react'
 
 type ContextType = {
