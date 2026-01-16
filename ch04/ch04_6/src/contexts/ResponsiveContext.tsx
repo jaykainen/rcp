@@ -4,20 +4,25 @@ import {useWindowResize} from '../hooks'
 
 type ContextType = {
   breakpoint: string //공유할 데이터 속성
+  id?: string //공유할 데이터 속성
 }
 
 const defaultContextValue: ContextType = {
-  breakpoint: '' //공유할 데이터 속성 초깃값
+  breakpoint: '', //공유할 데이터 속성 초깃값
+  id: '' //공유할 데이터 속성 초깃값
 }
 
 export const ResponsiveContext = createContext<ContextType>(defaultContextValue)
 
-type ResponsiveProviderProps = {}
+type ResponsiveProviderProps = {
+  id: string
+}
 
 export const ResponsiveProvider: FC<PropsWithChildren<ResponsiveProviderProps>> = ({
   children,
   ...props
 }) => {
+  console.log('props :::: ', props)
   const [width] = useWindowResize()
   const breakpoint =
     width < 640
@@ -30,7 +35,8 @@ export const ResponsiveProvider: FC<PropsWithChildren<ResponsiveProviderProps>> 
       ? 'xl'
       : '2xl'
   const value = {
-    breakpoint
+    breakpoint,
+    id: props.id
   } //공유할 데이터 속성 값
 
   //아래의 ResponsiveContext.Provider로 자식노드에게 공유할 데이터 제공
@@ -38,6 +44,6 @@ export const ResponsiveProvider: FC<PropsWithChildren<ResponsiveProviderProps>> 
 }
 
 export const useResponsive = () => {
-  const {breakpoint} = useContext(ResponsiveContext)
-  return breakpoint
+  const {breakpoint, id} = useContext(ResponsiveContext)
+  return {breakpoint, id}
 }
