@@ -4,7 +4,6 @@ import {useInterval} from './useInterval'
 export const useClock = () => {
   const [today, setToday] = useState(new Date())
   useInterval(() => {
-    //console.log('2222')
     setToday(new Date())
   }, 2000)
   return today
