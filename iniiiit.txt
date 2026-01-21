@@ -1,14 +1,16 @@
-npx create-react-app ch04_3 --template typescript
+npx create-react-app ch05_3 --template typescript
 
-cd ch03_4
+cd ch05_3
 
 npm i chance luxon @fontsource/material-icons
 npm i -D @types/chance @types/luxon
 npm i -D postcss autoprefixer tailwindcss@3 @tailwindcss/line-clamp daisyui@4
+npm i redux @reduxjs/toolkit react-redux
 
-cp -r ../ch04_2/src/* ./src
-cp -r ../ch04_2/*.js .
-rm src/pages/*
+cp -r ../ch05_2/src/* ./src
+cp -r ../ch05_2/*.js .
+rm -r src/pages/*
+rm -r -force src/store
 
 //tailwind와 daisyui 버전 중요!!!
 
